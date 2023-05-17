@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: #F2F2F2;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1.5rem;
+    max-width: 23.5rem;
+}
+
+.card {
+    padding: 3rem;
+}
+
+.card h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.5rem;
+    color: #F2F2F2;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    margin-bottom: 1.75rem;
+}
+
+.card p {
+    font-size: 0.938rem;
+    line-height: 1.563rem;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.sedan-container {
+    background-color: hsl(31, 77%, 52%);
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+
+.suv-container {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.luxury-container {
+    background-color: hsl(179, 100%, 13%);
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+}
+
+/* --------------------------------BUTTONS---------------------------------- */
+.btn-learn-more {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.938rem;
+    padding: .75rem 1.5rem;
+    border-radius: 3rem;
+    border: none;
+    margin-top: 1.75rem;
+}
+
+.btn-learn-more:hover {
+    cursor: pointer;
+    border: .125rem solid #F2F2F2;
+    padding-top: .625rem;
+    padding-bottom: .625rem;
+    color: #F2F2F2;
+    background-color: #FFFFFF00;
+}
+
+.btn-sedan {
+    color: hsl(31, 77%, 52%);
+}
+
+.btn-suv {
+    color: hsl(184, 100%, 22%);
+}
+
+.btn-luxury {
+    color: hsl(179, 100%, 13%);
+}
+
+/* ---------------------------------MEDIA--------------------------- */
+@media screen and (min-width: 60.25rem) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 57.5rem;
+    }
+
+    .sedan-container {
+        border-top-right-radius: 0;
+        border-top-left-radius: .5rem;
+        border-bottom-left-radius: .5rem;
+    }
+
+    .luxury-container {
+        border-bottom-right-radius: .5rem;
+        border-top-right-radius: .5rem;
+        border-bottom-left-radius: 0;
+    }
+
+    .btn-learn-more {
+        margin-top: 5rem;
+    }
+}
